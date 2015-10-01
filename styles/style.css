@@ -10,7 +10,7 @@
   font-family: 'Weblysleek UI Light';
   src: url("../fonts/weblysleekuil.ttf") format("truetype"); }
 /* clear the default browser styles */
-html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote {
   padding: 0;
   margin: 0;
   font-size: 100%;
