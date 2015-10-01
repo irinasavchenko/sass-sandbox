@@ -26,36 +26,6 @@ body{
   min-width: 760px;
 }
 
-//@font-face {
-//  font-family: 'WeblySleek UI Semibold';
-//  src: url('./fonts/weblysleekuisb.ttf') format('truetype');
-//  font-weight: normal;
-//  font-style: normal;
-//}
-//
-//@font-face {
-//  font-family: 'Weblysleek UI Semilight';
-//  src: url('./fonts/weblysleekuisl.ttf');
-//}
-//
-//@font-face {
-//  font-family: 'Weblysleek UI Light';
-//  src: url('./fonts/weblysleekuil.ttf') format('truetype');
-//}
-
-//$color-header: #2f2f2f;
-//$color-header-active: #000000;
-//$color-table-th: #999999;
-//$color-table-active: #bbd9fc;
-//$color-nav: #88afdc;
-//$color-nav-link: #2a4c73;
-//$color-text: #fff;
-//$font-size: 12px;
-//$font-family-basic: 'WeblySleek UI Semibold';
-//$height-header: 48px;
-
-
-
 header {
   background: $color-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
   height: $height-header;
