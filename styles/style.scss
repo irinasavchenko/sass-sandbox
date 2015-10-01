@@ -2,7 +2,7 @@
 @import "_fonts";
 
 /* clear the default browser styles */
-html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote
 {
   padding: 0;
   margin: 0;
@@ -11,7 +11,6 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable,
 }
 
 ul {
-
   margin-left: 1.4em;
   list-style: square;
 }
@@ -25,36 +24,6 @@ body{
   margin: auto 0;
   min-width: 760px;
 }
-
-//@font-face {
-//  font-family: 'WeblySleek UI Semibold';
-//  src: url('./fonts/weblysleekuisb.ttf') format('truetype');
-//  font-weight: normal;
-//  font-style: normal;
-//}
-//
-//@font-face {
-//  font-family: 'Weblysleek UI Semilight';
-//  src: url('./fonts/weblysleekuisl.ttf');
-//}
-//
-//@font-face {
-//  font-family: 'Weblysleek UI Light';
-//  src: url('./fonts/weblysleekuil.ttf') format('truetype');
-//}
-
-//$color-header: #2f2f2f;
-//$color-header-active: #000000;
-//$color-table-th: #999999;
-//$color-table-active: #bbd9fc;
-//$color-nav: #88afdc;
-//$color-nav-link: #2a4c73;
-//$color-text: #fff;
-//$font-size: 12px;
-//$font-family-basic: 'WeblySleek UI Semibold';
-//$height-header: 48px;
-
-
 
 header {
   background: $color-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
@@ -74,7 +43,6 @@ header {
     float: left;
     display: block;
     height: 100%;
-
     a {
       display: block;
       text-decoration: none;
@@ -130,7 +98,6 @@ nav {
   background-color: $color-blue;
   div {
     float: left;
-
     p {
       text-transform: uppercase;
       font-family: $font-family-basic;
@@ -167,16 +134,6 @@ nav {
     border-bottom-color: $color-text;
   }
 }
-
-//.participants a:hover {
-//  color: $color-text;
-//  border-bottom-color: $color-text;
-//}
-//
-//.participants a.active-link {
-//  color: $color-text;
-//  border-bottom-color: $color-text;
-//}
 
 .buttons {
   margin: 25px 78px 0 72px;
