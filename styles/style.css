@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'WeblySleek UI Semibold';
+  src: url("../fonts/weblysleekuisb.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Weblysleek UI Semilight';
+  src: url("../fonts/weblysleekuisl.ttf"); }
+@font-face {
+  font-family: 'Weblysleek UI Light';
+  src: url("../fonts/weblysleekuil.ttf") format("truetype"); }
+/* clear the default browser styles */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  margin-left: 1.4em;
+  list-style: square; }
+
+button, input {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: auto 0;
+  min-width: 760px; }
+
+header {
+  background: #2f2f2f url("../images/logo_top_menu.svg") no-repeat 3% 45%;
+  height: 48px;
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px; }
+  header p {
+    font-size: 12px;
+    color: #fff; }
+
+.menu-items {
+  display: block;
+  float: right; }
+  .menu-items li {
+    float: left;
+    display: block;
+    height: 100%; }
+    .menu-items li a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      margin: 0 15px;
+      padding-left: 40px;
+      line-height: 48px;
+      background: center left no-repeat;
+      font-family: "WeblySleek UI Semibold";
+      font-size: 12px;
+      height: 100%;
+      cursor: pointer; }
+
+.files a:first-child {
+  padding-left: 50px; }
+
+.owner a:last-child {
+  padding-left: 53px; }
+
+.menu-items li:hover, li.active {
+  background-color: #000000; }
+
+.menu-items li.files a {
+  background-image: url("../images/LUC_users_light_1.png"); }
+
+.menu-items li.share a {
+  background-image: url("../images/LUC_users_light_2.png"); }
+
+.menu-items li.news a {
+  background-image: url("../images/LUC_users_light_3.png"); }
+
+.menu-items li.participants a {
+  background-image: url("../images/LUC_users_light_4.png"); }
+
+.menu-items li.owner a {
+  background-image: url("../images/LUC_users_light-7.png"); }
+
+nav {
+  height: 64px;
+  width: 100%;
+  padding-left: 72px;
+  padding-right: 72px;
+  background-color: #88afdc; }
+  nav div {
+    float: left; }
+    nav div p {
+      text-transform: uppercase;
+      font-family: "WeblySleek UI Semibold";
+      font-size: 16px;
+      color: #fff;
+      line-height: 62px; }
+
+.participants {
+  float: right; }
+  .participants li {
+    float: left;
+    list-style: none;
+    height: 100%; }
+    .participants li a {
+      text-transform: capitalize;
+      text-decoration: none;
+      color: #2a4c73;
+      font-family: "WeblySleek UI Semibold";
+      font-size: 14.7px;
+      cursor: pointer;
+      padding: 10px 10px 5px 10px;
+      margin-left: 5px;
+      border-bottom: 2px solid #2a4c73;
+      height: 100%;
+      line-height: 64px; }
+  .participants a:hover, .participants a.active-link {
+    color: #fff;
+    border-bottom-color: #fff; }
+
+.buttons {
+  margin: 25px 78px 0 72px; }
+  .buttons button.btn {
+    padding: 5px 15px;
+    font-size: 14px;
+    font-family: 'WeblySleek UI Semibold';
+    color: #5d5d5d; }
+
+/*# sourceMappingURL=style.css.map */

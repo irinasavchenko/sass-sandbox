@@ -1,0 +1,25 @@
+﻿button.exercise {
+    background-color: red;
+    border-radius: 15px;
+}
+
+button.exercise:hover {
+    background-color: #1b6d85;
+}
+
+div.form-group input {
+    width: 150px;
+}
+
+form, div.buttons, .checkbox-inline-ex, div.table-ex {
+    margin-top: 50px;
+}
+
+form div.form-group input {
+    outline: none;
+}
+
+div.checkbox-inline-ex img.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+    -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+box-shadow: @shadow;
+}

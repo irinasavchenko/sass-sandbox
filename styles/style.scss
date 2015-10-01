@@ -1,0 +1,190 @@
+@import "_vars";
+@import "_fonts";
+
+/* clear the default browser styles */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote
+{
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+
+  margin-left: 1.4em;
+  list-style: square;
+}
+
+button, input {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: auto 0;
+  min-width: 760px;
+}
+
+//@font-face {
+//  font-family: 'WeblySleek UI Semibold';
+//  src: url('./fonts/weblysleekuisb.ttf') format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Weblysleek UI Semilight';
+//  src: url('./fonts/weblysleekuisl.ttf');
+//}
+//
+//@font-face {
+//  font-family: 'Weblysleek UI Light';
+//  src: url('./fonts/weblysleekuil.ttf') format('truetype');
+//}
+
+//$color-header: #2f2f2f;
+//$color-header-active: #000000;
+//$color-table-th: #999999;
+//$color-table-active: #bbd9fc;
+//$color-nav: #88afdc;
+//$color-nav-link: #2a4c73;
+//$color-text: #fff;
+//$font-size: 12px;
+//$font-family-basic: 'WeblySleek UI Semibold';
+//$height-header: 48px;
+
+
+
+header {
+  background: $color-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
+  height: $height-header;
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  p {
+    font-size: $font-size;
+    color: $color-text;
+  }
+}
+.menu-items {
+  display: block;
+  float: right;
+  li{
+    float: left;
+    display: block;
+    height: 100%;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: $color-text;
+      margin: 0 15px;
+      padding-left: 40px;
+      line-height: 48px;
+      background: center left no-repeat;
+      font-family: $font-family-basic;
+      font-size: $font-size;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+.files a:first-child {
+  padding-left: 50px;
+}
+
+.owner a:last-child{
+  padding-left: 53px;
+}
+
+.menu-items li:hover, li.active {
+  background-color: $color-black;
+}
+
+.menu-items li.files a {
+  background-image: url("../images/LUC_users_light_1.png");
+}
+
+.menu-items li.share a {
+  background-image: url("../images/LUC_users_light_2.png");
+}
+
+.menu-items li.news a {
+  background-image: url("../images/LUC_users_light_3.png");
+}
+
+.menu-items li.participants a {
+  background-image: url("../images/LUC_users_light_4.png");
+}
+
+.menu-items li.owner a {
+  background-image: url("../images/LUC_users_light-7.png");
+}
+
+nav {
+  height: $height-header+16px;
+  width: 100%;
+  padding-left: 72px;
+  padding-right: 72px;
+  background-color: $color-blue;
+  div {
+    float: left;
+
+    p {
+      text-transform: uppercase;
+      font-family: $font-family-basic;
+      font-size: $font-size+4px;
+      color: $color-text;
+      line-height: 62px;
+    }
+  }
+}
+.participants {
+  float: right;
+
+  li {
+    float: left;
+    list-style: none;
+    height: 100%;
+    a {
+      text-transform: capitalize;
+      text-decoration: none;
+      color: $color-dark-blue;
+      font-family: $font-family-basic;
+      font-size: $font-size+2.7px;
+      cursor: pointer;
+      padding: 10px 10px 5px 10px;
+      margin-left: 5px;
+      border-bottom: 2px solid $color-dark-blue;
+      height: 100%;
+      line-height: 64px;
+    }
+  }
+
+  a:hover, a.active-link {
+    color: $color-text;
+    border-bottom-color: $color-text;
+  }
+}
+
+//.participants a:hover {
+//  color: $color-text;
+//  border-bottom-color: $color-text;
+//}
+//
+//.participants a.active-link {
+//  color: $color-text;
+//  border-bottom-color: $color-text;
+//}
+
+.buttons {
+  margin: 25px 78px 0 72px;
+
+  button.btn {
+    padding: 5px 15px;
+    font-size: 14px;
+    font-family: 'WeblySleek UI Semibold';
+    color: #5d5d5d;
+  }
+}
