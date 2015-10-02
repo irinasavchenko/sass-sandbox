@@ -32,7 +32,7 @@ header {
   background: #2f2f2f url("../images/logo_top_menu.svg") no-repeat 3% 45%;
   height: 48px;
   width: 100%;
-  padding-right: 40px;
+  padding-right: 48px;
   padding-left: 40px; }
   header p {
     font-size: 12px;
@@ -49,10 +49,10 @@ header {
       display: block;
       text-decoration: none;
       color: #fff;
-      margin: 0 15px;
+      margin: 0 23px;
       padding-left: 40px;
       line-height: 48px;
-      background: center left no-repeat;
+      background: left center no-repeat;
       font-family: "WeblySleek UI Semibold";
       font-size: 12px;
       height: 100%;
@@ -119,12 +119,31 @@ nav {
     color: #fff;
     border-bottom-color: #fff; }
 
-.buttons {
-  margin: 25px 78px 0 72px; }
-  .buttons button.btn {
-    padding: 5px 15px;
+.container-buttons {
+  margin: 25px 80px 0 72px; }
+  .container-buttons button.invite-users {
+    display: block;
+    float: left;
+    padding: 7px 24px;
     font-size: 14px;
     font-family: 'WeblySleek UI Semibold';
-    color: #5d5d5d; }
+    color: #5d5d5d;
+    outline: none; }
+  .container-buttons div.small-buttons {
+    display: block;
+    float: right; }
+    .container-buttons div.small-buttons button {
+      display: block;
+      float: left;
+      outline: none;
+      width: 40px;
+      height: 30px;
+      margin-right: 10px; }
+    .container-buttons div.small-buttons button.btn-delete {
+      background: url("../images/delete-button.png") #e38686 center center no-repeat;
+      border: 1px solid #e38686; }
+    .container-buttons div.small-buttons button.btn-block {
+      background: url("../images/LUC_users_light_5.png") #9aa4af center center no-repeat;
+      border: 1px solid #9aa4af; }
 
 /*# sourceMappingURL=style.css.map */
