@@ -145,5 +145,48 @@ nav {
     .container div.small-buttons button.btn-block {
       background: url("../images/LUC_users_light_5.png") #9aa4af center center no-repeat;
       border: 1px solid #9aa4af; }
+  .container table {
+    border: 1px solid #d3d3d3;
+    /*
+    td.photo1 {
+      background: url("../images/Photo1.png") no-repeat 5px 8px;
+      padding-left: 65px;
+    }
+    td.photo2 {
+      background: url("../images/Photo2.png") no-repeat 5px 8px;
+      padding-left: 65px;
+    }
+    td.photo3 {
+      background: url("../images/Photo3.png") no-repeat 5px 8px;
+      padding-left: 65px;
+    }
+    td.photo4 {
+      background: url("../images/Photo4.png") no-repeat 5px 8px;
+      padding-left: 65px;
+    }*/ }
+    .container table th {
+      background-color: #999999;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      font-family: 'WeblySleek UI Semibold';
+      height: 48px; }
+    .container table td, .container table tr {
+      font-size: 14px;
+      font-family: 'WeblySleek UI Semilight'; }
+    .container table img {
+      padding-right: 12px; }
+    .container table td.add-btn-del {
+      background: url("../images/delete-button-black.png") no-repeat 90% 20%;
+      padding-right: 80px;
+      position: relative; }
+    .container table div.add-btn-edit {
+      background: url("../images/edit-button.png") no-repeat;
+      z-index: 5;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 8px;
+      right: 30px; }
 
 /*# sourceMappingURL=style.css.map */

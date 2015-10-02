@@ -26,7 +26,7 @@ body{
 }
 
 header {
-  background: $color-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
+  background: $color-dark-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
   height: $height-header;
   width: 100%;
   padding-right: 48px;
@@ -163,9 +163,59 @@ nav {
        border: 1px solid $color-rose;
       }
       button.btn-block {
-        background: url("../images/LUC_users_light_5.png") $color-light-gray center center no-repeat;
-        border: 1px solid $color-light-gray;
+        background: url("../images/LUC_users_light_5.png") $color-gray-blue center center no-repeat;
+        border: 1px solid $color-gray-blue;
       }
     }
+  table {
+    border: 1px solid $color-light-gray;
+    th {
+      background-color: $color-gray;
+      text-align: center;
+      color: $color-text;
+      font-size: 16px;
+      font-family: 'WeblySleek UI Semibold';
+      height: 48px;
+    }
+    td, tr {
+      font-size: 14px;
+      font-family: 'WeblySleek UI Semilight';
+    }
+    img {
+      padding-right: 12px;
 
+    }
+    
+    /*
+    td.photo1 {
+      background: url("../images/Photo1.png") no-repeat 5px 8px;
+      padding-left: 65px;
+    }
+    td.photo2 {
+      background: url("../images/Photo2.png") no-repeat 5px 8px;
+      padding-left: 65px;
+    }
+    td.photo3 {
+      background: url("../images/Photo3.png") no-repeat 5px 8px;
+      padding-left: 65px;
+    }
+    td.photo4 {
+      background: url("../images/Photo4.png") no-repeat 5px 8px;
+      padding-left: 65px;
+    }*/
+    td.add-btn-del {
+      background: url("../images/delete-button-black.png") no-repeat 90% 20%;
+      padding-right: 80px;
+      position: relative;
+    }
+    div.add-btn-edit {
+      background: url("../images/edit-button.png")no-repeat;
+      z-index: 5;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 8px;
+      right: 30px;
+    }
+  }
 }
