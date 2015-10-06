@@ -2,7 +2,7 @@
 @import "_fonts";
 
 /* clear the default browser styles */
-html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote
 {
   padding: 0;
   margin: 0;
@@ -11,7 +11,6 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable,
 }
 
 ul {
-
   margin-left: 1.4em;
   list-style: square;
 }
@@ -26,41 +25,11 @@ body{
   min-width: 760px;
 }
 
-//@font-face {
-//  font-family: 'WeblySleek UI Semibold';
-//  src: url('./fonts/weblysleekuisb.ttf') format('truetype');
-//  font-weight: normal;
-//  font-style: normal;
-//}
-//
-//@font-face {
-//  font-family: 'Weblysleek UI Semilight';
-//  src: url('./fonts/weblysleekuisl.ttf');
-//}
-//
-//@font-face {
-//  font-family: 'Weblysleek UI Light';
-//  src: url('./fonts/weblysleekuil.ttf') format('truetype');
-//}
-
-//$color-header: #2f2f2f;
-//$color-header-active: #000000;
-//$color-table-th: #999999;
-//$color-table-active: #bbd9fc;
-//$color-nav: #88afdc;
-//$color-nav-link: #2a4c73;
-//$color-text: #fff;
-//$font-size: 12px;
-//$font-family-basic: 'WeblySleek UI Semibold';
-//$height-header: 48px;
-
-
-
 header {
-  background: $color-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
+  background: $color-dark-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
   height: $height-header;
   width: 100%;
-  padding-right: 40px;
+  padding-right: 48px;
   padding-left: 40px;
   p {
     font-size: $font-size;
@@ -74,15 +43,14 @@ header {
     float: left;
     display: block;
     height: 100%;
-
     a {
       display: block;
       text-decoration: none;
       color: $color-text;
-      margin: 0 15px;
+      margin: 0 23px;
       padding-left: 40px;
       line-height: 48px;
-      background: center left no-repeat;
+      background: left center no-repeat;
       font-family: $font-family-basic;
       font-size: $font-size;
       height: 100%;
@@ -130,7 +98,6 @@ nav {
   background-color: $color-blue;
   div {
     float: left;
-
     p {
       text-transform: uppercase;
       font-family: $font-family-basic;
@@ -168,23 +135,94 @@ nav {
   }
 }
 
-//.participants a:hover {
-//  color: $color-text;
-//  border-bottom-color: $color-text;
-//}
-//
-//.participants a.active-link {
-//  color: $color-text;
-//  border-bottom-color: $color-text;
-//}
+.container {
+  margin: 25px 80px 0 72px;
 
-.buttons {
-  margin: 25px 78px 0 72px;
-
-  button.btn {
-    padding: 5px 15px;
+  button.invite-users {
+    display: block;
+    float: left;
+    padding: 7px 24px;
     font-size: 14px;
     font-family: 'WeblySleek UI Semibold';
     color: #5d5d5d;
+    outline: none;
   }
+  div.small-buttons {
+    display: block;
+    float: right;
+    button {
+      display: block;
+      float: left;
+      outline: none;
+      width: 40px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    button.btn-delete {
+      background: url("../images/delete-button.png") $color-rose center center no-repeat;
+      border: 1px solid $color-rose;
+    }
+    button.btn-block {
+      background: url("../images/LUC_users_light_5.png") $color-gray-blue center center no-repeat;
+      border: 1px solid $color-gray-blue;
+    }
+  }
+  table {
+    border: 1px solid $color-light-gray;
+    tbody {
+        tr {
+          font-size: 14px;
+          font-family: 'WeblySleek UI Semilight';
+            th:last-child {
+              text-align: left;
+            }
+        }
+        th {
+          background-color: $color-gray;
+          text-align: center;
+          color: $color-text;
+          font-size: 16px;
+          font-family: 'WeblySleek UI Semibold';
+          height: 48px;
+          vertical-align: middle;
+        }
+        tr.active-row {
+          background-color: $color-light-blue;
+          border: 2px solid $color-blue;
+        }
+        td:first-child {
+          padding-top: 5px;
+          padding-left: 7px;
+          padding-right: 7px;
+          padding-bottom: 2px;
+        }
+
+        td {
+          vertical-align: middle;
+        }
+
+        td.add-btn-del {
+          background: url("../images/delete-button-black.png") no-repeat 113px 17px;
+          padding-right: 80px;
+          position: relative;
+        }
+        div.add-btn-edit {
+          background: url("../images/edit-button.png") no-repeat;
+          z-index: 5;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 17px;
+          right: 30px;
+        }
+      }
+    }
+  }
+
+
+
+.container table tbody tr:hover {
+    background-color: $color-light-blue;
+    border: 2px solid $color-blue;
+
 }
