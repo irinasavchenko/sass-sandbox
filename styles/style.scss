@@ -26,7 +26,7 @@ body{
 }
 
 header {
-  background: $color-dark-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
+  background: $color-dark-grey url($image-path + "/logo_top_menu.svg") no-repeat 3% 45%;
   height: $height-header;
   width: 100%;
   padding-right: 48px;
