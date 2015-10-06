@@ -119,9 +119,9 @@ nav {
     color: #fff;
     border-bottom-color: #fff; }
 
-.container-buttons {
+.container {
   margin: 25px 80px 0 72px; }
-  .container-buttons button.invite-users {
+  .container button.invite-users {
     display: block;
     float: left;
     padding: 7px 24px;
@@ -129,21 +129,62 @@ nav {
     font-family: 'WeblySleek UI Semibold';
     color: #5d5d5d;
     outline: none; }
-  .container-buttons div.small-buttons {
+  .container div.small-buttons {
     display: block;
     float: right; }
-    .container-buttons div.small-buttons button {
+    .container div.small-buttons button {
       display: block;
       float: left;
       outline: none;
       width: 40px;
       height: 30px;
       margin-right: 10px; }
-    .container-buttons div.small-buttons button.btn-delete {
+    .container div.small-buttons button.btn-delete {
       background: url("../images/delete-button.png") #e38686 center center no-repeat;
       border: 1px solid #e38686; }
-    .container-buttons div.small-buttons button.btn-block {
+    .container div.small-buttons button.btn-block {
       background: url("../images/LUC_users_light_5.png") #9aa4af center center no-repeat;
       border: 1px solid #9aa4af; }
+  .container table {
+    border: 1px solid #d3d3d3; }
+    .container table tbody tr {
+      font-size: 14px;
+      font-family: 'WeblySleek UI Semilight'; }
+      .container table tbody tr th:last-child {
+        text-align: left; }
+    .container table tbody th {
+      background-color: #999999;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      font-family: 'WeblySleek UI Semibold';
+      height: 48px;
+      vertical-align: middle; }
+    .container table tbody tr.active-row {
+      background-color: #bbd9fc;
+      border: 2px solid #88afdc; }
+    .container table tbody td:first-child {
+      padding-top: 5px;
+      padding-left: 7px;
+      padding-right: 7px;
+      padding-bottom: 2px; }
+    .container table tbody td {
+      vertical-align: middle; }
+    .container table tbody td.add-btn-del {
+      background: url("../images/delete-button-black.png") no-repeat 113px 17px;
+      padding-right: 80px;
+      position: relative; }
+    .container table tbody div.add-btn-edit {
+      background: url("../images/edit-button.png") no-repeat;
+      z-index: 5;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 17px;
+      right: 30px; }
+
+.container table tbody tr:hover {
+  background-color: #bbd9fc;
+  border: 2px solid #88afdc; }
 
 /*# sourceMappingURL=style.css.map */
