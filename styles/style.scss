@@ -75,23 +75,23 @@ header {
 }
 
 .menu-items li.files a {
-  background-image: url("../images/LUC_users_light_1.png");
+  background-image: url($image-path + "/LUC_users_light_1.png");
 }
 
 .menu-items li.share a {
-  background-image: url("../images/LUC_users_light_2.png");
+  background-image: url($image-path + "/LUC_users_light_2.png");
 }
 
 .menu-items li.news a {
-  background-image: url("../images/LUC_users_light_3.png");
+  background-image: url($image-path + "/LUC_users_light_3.png");
 }
 
 .menu-items li.participants a {
-  background-image: url("../images/LUC_users_light_4.png");
+  background-image: url($image-path + "/LUC_users_light_4.png");
 }
 
 .menu-items li.owner a {
-  background-image: url("../images/LUC_users_light-7.png");
+  background-image: url($image-path + "/LUC_users_light-7.png");
 }
 
 nav {
@@ -170,12 +170,12 @@ nav {
     }
 
     button.btn-delete {
-      background: url("../images/delete-button.png") $color-rose center center no-repeat;
+      background: url($image-path + "/delete-button.png") $color-rose center center no-repeat;
       border: 1px solid $color-rose;
     }
 
     button.btn-block {
-      background: url("../images/LUC_users_light_5.png") $color-gray-blue center center no-repeat;
+      background: url($image-path + "/LUC_users_light_5.png") $color-gray-blue center center no-repeat;
       border: 1px solid $color-gray-blue;
     }
   }
@@ -221,13 +221,13 @@ nav {
         }
 
         td.add-btn-del {
-          background: url("../images/delete-button-black.png") no-repeat 113px 17px;
+          background: url($image-path + "/delete-button-black.png") no-repeat 113px 17px;
           padding-right: 80px;
           position: relative;
         }
 
         div.add-btn-edit {
-          background: url("../images/edit-button.png") no-repeat;
+          background: url($image-path + "/edit-button.png") no-repeat;
           z-index: 5;
           position: absolute;
           width: 16px;
