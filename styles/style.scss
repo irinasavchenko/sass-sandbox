@@ -11,13 +11,14 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fie
 }
 
 ul {
-  margin-left: 1.4em;
+  margin: 0;
   list-style: square;
 }
 
 button, input {
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body{
@@ -26,11 +27,12 @@ body{
 }
 
 header {
-  background: $color-dark-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
+  background: $color-dark-grey url($image-path + "/logo_top_menu.svg") no-repeat 3% 45%;
   height: $height-header;
   width: 100%;
   padding-right: 48px;
   padding-left: 40px;
+
   p {
     font-size: $font-size;
     color: $color-text;
@@ -39,10 +41,12 @@ header {
 .menu-items {
   display: block;
   float: right;
+
   li{
     float: left;
     display: block;
     height: 100%;
+
     a {
       display: block;
       text-decoration: none;
@@ -96,8 +100,10 @@ nav {
   padding-left: 72px;
   padding-right: 72px;
   background-color: $color-blue;
+
   div {
     float: left;
+
     p {
       text-transform: uppercase;
       font-family: $font-family-basic;
@@ -107,6 +113,7 @@ nav {
     }
   }
 }
+
 .participants {
   float: right;
 
@@ -114,6 +121,7 @@ nav {
     float: left;
     list-style: none;
     height: 100%;
+
     a {
       text-transform: capitalize;
       text-decoration: none;
@@ -147,9 +155,11 @@ nav {
     color: #5d5d5d;
     outline: none;
   }
+
   div.small-buttons {
     display: block;
     float: right;
+
     button {
       display: block;
       float: left;
@@ -158,25 +168,32 @@ nav {
       height: 30px;
       margin-right: 10px;
     }
+
     button.btn-delete {
       background: url("../images/delete-button.png") $color-rose center center no-repeat;
       border: 1px solid $color-rose;
     }
+
     button.btn-block {
       background: url("../images/LUC_users_light_5.png") $color-gray-blue center center no-repeat;
       border: 1px solid $color-gray-blue;
     }
   }
+
   table {
     border: 1px solid $color-light-gray;
+
     tbody {
+
         tr {
           font-size: 14px;
           font-family: 'WeblySleek UI Semilight';
+
             th:last-child {
               text-align: left;
             }
         }
+
         th {
           background-color: $color-gray;
           text-align: center;
@@ -186,10 +203,12 @@ nav {
           height: 48px;
           vertical-align: middle;
         }
+
         tr.active-row {
           background-color: $color-light-blue;
           border: 2px solid $color-blue;
         }
+
         td:first-child {
           padding-top: 5px;
           padding-left: 7px;
@@ -206,6 +225,7 @@ nav {
           padding-right: 80px;
           position: relative;
         }
+
         div.add-btn-edit {
           background: url("../images/edit-button.png") no-repeat;
           z-index: 5;
@@ -219,10 +239,114 @@ nav {
     }
   }
 
-
-
 .container table tbody tr:hover {
     background-color: $color-light-blue;
     border: 2px solid $color-blue;
 
+}
+
+div#myModal {
+  div.modal-dialog {
+    margin: 130px auto;
+    width: 650px;
+    div.modal-content {
+      div.modal-header {
+        background-color: $color-light-black-for-modal-window;
+        height: 40px;
+        h4 {
+          color: $color-text;
+          font-size: $font-size+4;
+          line-height: 16px;
+          font-family: $font-family-basic;
+        }
+        button.close {
+          span {
+            color: white;
+          }
+        }
+      }
+      div.modal-menu-items {
+        height: 64px;
+        width: 100%;
+        background-color: $color-light-gray-for-modal-window;
+        padding: 0;
+        ul.list-modal-links {
+          margin: 0;
+          li {
+            list-style: none;
+            display: block;
+            height: 100%;
+            float: left;
+            margin-left: 60px;
+
+            a {
+              color: $color-gray;
+              font-size: $font-size+4;
+              font-family: $font-family-basic;
+              padding: 15px 15px 7px 15px;
+              border-bottom: 2px solid $color-gray;
+              height: 100%;
+              line-height: 64px;
+            }
+            a:hover, a:link, a.active-modal-link {
+              text-decoration: none;
+              color: $color-black;
+              border-bottom-color: $color-black;
+            }
+          /*  a:hover, a.active-modal-link {
+              color: $color-black;
+              border-bottom-color: $color-black;
+            }*/
+          }
+
+          li:first-child {
+            margin-left: 30px;
+          }
+          li:last-child {
+            float: right;
+            margin-right: 50px;
+          }
+        }
+      }
+      div.modal-body {
+        padding: 25px 50px 40px 30px;
+        form.form-horizontal {
+          div.form-group {
+            margin-bottom: 10px;
+            label.control-label {
+              text-align: left;
+              color: $color-gray-for-modal-window;
+              font-family: $font-family-basic-light;
+              font-size: $font-size+4;
+            }
+            div.outline:link {
+
+            }
+            input.form-control {
+              border-radius: 0;
+              border: 1px solid #979797;
+              outline: none;
+            }
+          }
+        }
+      }
+      div.modal-footer {
+        height: 65px;
+        background-color: $color-gray-for-modal-window;
+        padding: 15px 10px 15px;
+        button {
+          padding: 10px 40px;
+          background: -webkit-linear-gradient(top,#3f3f3f,#141414);
+          color: $color-text;
+          outline: none;
+          border-radius: 6px;
+          font-family: $font-family-basic;
+          font-size: $font-size+2.7;
+        }
+      }
+    }
+  }
+}
+div.background-opacity {
+  opacity: 0.5;
 }

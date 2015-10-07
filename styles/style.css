@@ -17,12 +17,13 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fie
   font-weight: normal; }
 
 ul {
-  margin-left: 1.4em;
+  margin: 0;
   list-style: square; }
 
 button, input {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  outline: none; }
 
 body {
   margin: auto 0;
@@ -186,5 +187,81 @@ nav {
 .container table tbody tr:hover {
   background-color: #bbd9fc;
   border: 2px solid #88afdc; }
+
+div#myModal div.modal-dialog {
+  margin: 130px auto;
+  width: 650px; }
+  div#myModal div.modal-dialog div.modal-content div.modal-header {
+    background-color: #373737;
+    height: 40px; }
+    div#myModal div.modal-dialog div.modal-content div.modal-header h4 {
+      color: #fff;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: "WeblySleek UI Semibold"; }
+    div#myModal div.modal-dialog div.modal-content div.modal-header button.close span {
+      color: white; }
+  div#myModal div.modal-dialog div.modal-content div.modal-menu-items {
+    height: 64px;
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 0; }
+    div#myModal div.modal-dialog div.modal-content div.modal-menu-items ul.list-modal-links {
+      margin: 0; }
+      div#myModal div.modal-dialog div.modal-content div.modal-menu-items ul.list-modal-links li {
+        list-style: none;
+        display: block;
+        height: 100%;
+        float: left;
+        margin-left: 60px;
+        /*  a:hover, a.active-modal-link {
+            color: $color-black;
+            border-bottom-color: $color-black;
+          }*/ }
+        div#myModal div.modal-dialog div.modal-content div.modal-menu-items ul.list-modal-links li a {
+          color: #999999;
+          font-size: 16px;
+          font-family: "WeblySleek UI Semibold";
+          padding: 15px 15px 7px 15px;
+          border-bottom: 2px solid #999999;
+          height: 100%;
+          line-height: 64px; }
+        div#myModal div.modal-dialog div.modal-content div.modal-menu-items ul.list-modal-links li a:hover, div#myModal div.modal-dialog div.modal-content div.modal-menu-items ul.list-modal-links li a:link, div#myModal div.modal-dialog div.modal-content div.modal-menu-items ul.list-modal-links li a.active-modal-link {
+          text-decoration: none;
+          color: #000000;
+          border-bottom-color: #000000; }
+      div#myModal div.modal-dialog div.modal-content div.modal-menu-items ul.list-modal-links li:first-child {
+        margin-left: 30px; }
+      div#myModal div.modal-dialog div.modal-content div.modal-menu-items ul.list-modal-links li:last-child {
+        float: right;
+        margin-right: 50px; }
+  div#myModal div.modal-dialog div.modal-content div.modal-body {
+    padding: 25px 50px 40px 30px; }
+    div#myModal div.modal-dialog div.modal-content div.modal-body form.form-horizontal div.form-group {
+      margin-bottom: 10px; }
+      div#myModal div.modal-dialog div.modal-content div.modal-body form.form-horizontal div.form-group label.control-label {
+        text-align: left;
+        color: #333333;
+        font-family: "Weblysleek UI Semilight";
+        font-size: 16px; }
+      div#myModal div.modal-dialog div.modal-content div.modal-body form.form-horizontal div.form-group input.form-control {
+        border-radius: 0;
+        border: 1px solid #979797;
+        outline: none; }
+  div#myModal div.modal-dialog div.modal-content div.modal-footer {
+    height: 65px;
+    background-color: #333333;
+    padding: 15px 10px 15px; }
+    div#myModal div.modal-dialog div.modal-content div.modal-footer button {
+      padding: 10px 40px;
+      background: -webkit-linear-gradient(top, #3f3f3f, #141414);
+      color: #fff;
+      outline: none;
+      border-radius: 6px;
+      font-family: "WeblySleek UI Semibold";
+      font-size: 14.7px; }
+
+div.background-opacity {
+  opacity: 0.5; }
 
 /*# sourceMappingURL=style.css.map */
