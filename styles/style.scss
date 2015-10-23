@@ -1,6 +1,7 @@
 @import "_vars";
 @import "_fonts";
 
+
 /* clear the default browser styles */
 html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote
 {
@@ -10,20 +11,19 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fie
   font-weight: normal;
 }
 
-ul {
-  margin: 0;
-  list-style: square;
-}
-
 button, input {
   margin: 0;
   padding: 0;
   outline: none;
 }
 
-body{
+body {
   margin: auto 0;
   min-width: 760px;
+  ul {
+    margin: 0;
+    list-style: square;
+  }
 }
 
 header {
@@ -32,42 +32,60 @@ header {
   width: 100%;
   padding-right: 48px;
   padding-left: 40px;
-
+  display: block;
+  float: left;
   p {
     font-size: $font-size;
     color: $color-text;
+    margin: 0;
   }
-}
-.menu-items {
-  display: block;
-  float: right;
 
-  li{
-    float: left;
+  .menu-items {
     display: block;
+    float: right;
     height: 100%;
-
-    a {
-      display: block;
-      text-decoration: none;
-      color: $color-text;
-      margin: 0 23px;
-      padding-left: 40px;
-      line-height: 48px;
-      background: left center no-repeat;
-      font-family: $font-family-basic;
-      font-size: $font-size;
+    ul {
       height: 100%;
-      cursor: pointer;
+      li {
+        float: left;
+        display: block;
+        height: 100%;
+        a {
+          display: block;
+          text-decoration: none;
+          color: $color-text;
+          margin: 0 23px;
+          padding-left: 40px;
+          line-height: 48px;
+          background: left center no-repeat;
+          font-family: $font-family-basic;
+          font-size: $font-size;
+          height: 100%;
+          cursor: pointer;
+          span.caret {
+            position: absolute;
+            top: 25px;
+            left: 88px;
+            color: white;
+          }
+        }
+      }
+      li.owner {
+        position: relative;
+        a {
+          margin: 0 10px 0 5px;
+        }
+      }
     }
   }
 }
+
 .files a:first-child {
   padding-left: 50px;
 }
 
 .owner a:last-child{
-  padding-left: 53px;
+  padding-left: 55px;
 }
 
 .menu-items li:hover, li.active {
@@ -94,14 +112,43 @@ header {
   background-image: url($image-path + "/LUC_users_light-7.png");
 }
 
+@media screen and (max-width: 900px) {
+
+  header {
+    .menu-items {
+      ul {
+        li {
+          a {
+            height: 100%;
+            width: 50px;
+            padding: 0;
+            background-position: center center;
+            margin: 0;
+            p {
+              display: none;
+            }
+            span.caret {
+              left: 53px;
+            }
+          }
+        }
+        li.owner a{
+            margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+}
+
 nav {
   height: $height-header+16px;
   width: 100%;
   padding-left: 72px;
   padding-right: 72px;
   background-color: $color-blue;
+  clear: both;
 
-  div {
+  .name-nav {
     float: left;
 
     p {
@@ -112,34 +159,34 @@ nav {
       line-height: 62px;
     }
   }
-}
 
-.participants {
-  float: right;
+  .participants {
+    float: right;
 
-  li {
-    float: left;
-    list-style: none;
-    height: 100%;
-
-    a {
-      text-transform: capitalize;
-      text-decoration: none;
-      color: $color-dark-blue;
-      font-family: $font-family-basic;
-      font-size: $font-size+2.7px;
-      cursor: pointer;
-      padding: 10px 10px 5px 10px;
-      margin-left: 5px;
-      border-bottom: 2px solid $color-dark-blue;
+    li {
+      float: left;
+      list-style: none;
       height: 100%;
-      line-height: 64px;
-    }
-  }
 
-  a:hover, a.active-link {
-    color: $color-text;
-    border-bottom-color: $color-text;
+      a {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: $color-dark-blue;
+        font-family: $font-family-basic;
+        font-size: $font-size+2.7px;
+        cursor: pointer;
+        padding: 10px 10px 5px 10px;
+        margin-left: 5px;
+        border-bottom: 2px solid $color-dark-blue;
+        height: 100%;
+        line-height: 64px;
+      }
+    }
+
+    a:hover, a.active-link {
+      color: $color-text;
+      border-bottom-color: $color-text;
+    }
   }
 }
 
@@ -188,7 +235,6 @@ nav {
         tr {
           font-size: 14px;
           font-family: 'WeblySleek UI Semilight';
-
             th:last-child {
               text-align: left;
             }
@@ -242,15 +288,14 @@ nav {
 .container table tbody tr:hover {
     background-color: $color-light-blue;
     border: 2px solid $color-blue;
-
 }
 
-div#myModal {
-  div.modal-dialog {
+#myModal {
+  .modal-dialog {
     margin: 130px auto;
     width: 650px;
-    div.modal-content {
-      div.modal-header {
+    .modal-content {
+      .modal-header {
         background-color: $color-light-black-for-modal-window;
         height: 40px;
         h4 {
@@ -260,12 +305,17 @@ div#myModal {
           font-family: $font-family-basic;
         }
         button.close {
+          margin-top: 0;
+          opacity: 1;
+          font-size: 19px;
           span {
             color: white;
+            font-weight: 100;
+            text-shadow: none;
           }
         }
       }
-      div.modal-menu-items {
+      .modal-menu-items {
         height: 64px;
         width: 100%;
         background-color: $color-light-gray-for-modal-window;
@@ -278,7 +328,6 @@ div#myModal {
             height: 100%;
             float: left;
             margin-left: 60px;
-
             a {
               color: $color-gray;
               font-size: $font-size+4;
@@ -293,10 +342,6 @@ div#myModal {
               color: $color-black;
               border-bottom-color: $color-black;
             }
-          /*  a:hover, a.active-modal-link {
-              color: $color-black;
-              border-bottom-color: $color-black;
-            }*/
           }
 
           li:first-child {
@@ -308,10 +353,10 @@ div#myModal {
           }
         }
       }
-      div.modal-body {
+      .modal-body {
         padding: 25px 50px 40px 30px;
         form.form-horizontal {
-          div.form-group {
+          .form-group {
             margin-bottom: 10px;
             label.control-label {
               text-align: left;
@@ -319,27 +364,31 @@ div#myModal {
               font-family: $font-family-basic-light;
               font-size: $font-size+4;
             }
-            div.outline:link {
+            .outline:link {
 
             }
             input.form-control {
               border-radius: 0;
               border: 1px solid #979797;
               outline: none;
+              -moz-box-shadow: none;
+              -webkit-box-shadow: none;
+              box-shadow: none;
             }
           }
         }
       }
-      div.modal-footer {
+      .modal-footer {
         height: 65px;
         background-color: $color-gray-for-modal-window;
         padding: 15px 10px 15px;
         button {
           padding: 10px 40px;
-          background: -webkit-linear-gradient(top,#3f3f3f,#141414);
+          @include gradient(top, #3f3f3f, #141414);
           color: $color-text;
           outline: none;
-          border-radius: 6px;
+          border-radius: 4px;
+          border-color: #5d5d5d;
           font-family: $font-family-basic;
           font-size: $font-size+2.7;
         }
@@ -347,6 +396,6 @@ div#myModal {
     }
   }
 }
-div.background-opacity {
+.background-opacity {
   opacity: 0.5;
 }
