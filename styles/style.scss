@@ -1,6 +1,7 @@
 @import "_vars";
 @import "_fonts";
 
+
 /* clear the default browser styles */
 html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote
 {
@@ -10,60 +11,81 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fie
   font-weight: normal;
 }
 
-ul {
-  margin-left: 1.4em;
-  list-style: square;
-}
-
 button, input {
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
-body{
+body {
   margin: auto 0;
   min-width: 760px;
+  ul {
+    margin: 0;
+    list-style: square;
+  }
 }
 
 header {
-  background: $color-dark-grey url("../images/logo_top_menu.svg") no-repeat 3% 45%;
+  background: $color-dark-grey url($image-path + "/logo_top_menu.svg") no-repeat 3% 45%;
   height: $height-header;
   width: 100%;
   padding-right: 48px;
   padding-left: 40px;
+  display: block;
+  float: left;
   p {
     font-size: $font-size;
     color: $color-text;
+    margin: 0;
   }
-}
-.menu-items {
-  display: block;
-  float: right;
-  li{
-    float: left;
+
+  .menu-items {
     display: block;
+    float: right;
     height: 100%;
-    a {
-      display: block;
-      text-decoration: none;
-      color: $color-text;
-      margin: 0 23px;
-      padding-left: 40px;
-      line-height: 48px;
-      background: left center no-repeat;
-      font-family: $font-family-basic;
-      font-size: $font-size;
+    ul {
       height: 100%;
-      cursor: pointer;
+      li {
+        float: left;
+        display: block;
+        height: 100%;
+        a {
+          display: block;
+          text-decoration: none;
+          color: $color-text;
+          margin: 0 23px;
+          padding-left: 40px;
+          line-height: 48px;
+          background: left center no-repeat;
+          font-family: $font-family-basic;
+          font-size: $font-size;
+          height: 100%;
+          cursor: pointer;
+          span.caret {
+            position: absolute;
+            top: 25px;
+            left: 88px;
+            color: white;
+          }
+        }
+      }
+      li.owner {
+        position: relative;
+        a {
+          margin: 0 10px 0 5px;
+        }
+      }
     }
   }
 }
+
 .files a:first-child {
   padding-left: 50px;
 }
 
 .owner a:last-child{
-  padding-left: 53px;
+  padding-left: 55px;
 }
 
 .menu-items li:hover, li.active {
@@ -71,23 +93,51 @@ header {
 }
 
 .menu-items li.files a {
-  background-image: url("../images/LUC_users_light_1.png");
+  background-image: url($image-path + "/LUC_users_light_1.png");
 }
 
 .menu-items li.share a {
-  background-image: url("../images/LUC_users_light_2.png");
+  background-image: url($image-path + "/LUC_users_light_2.png");
 }
 
 .menu-items li.news a {
-  background-image: url("../images/LUC_users_light_3.png");
+  background-image: url($image-path + "/LUC_users_light_3.png");
 }
 
 .menu-items li.participants a {
-  background-image: url("../images/LUC_users_light_4.png");
+  background-image: url($image-path + "/LUC_users_light_4.png");
 }
 
 .menu-items li.owner a {
-  background-image: url("../images/LUC_users_light-7.png");
+  background-image: url($image-path + "/LUC_users_light-7.png");
+}
+
+@media screen and (max-width: 900px) {
+
+  header {
+    .menu-items {
+      ul {
+        li {
+          a {
+            height: 100%;
+            width: 50px;
+            padding: 0;
+            background-position: center center;
+            margin: 0;
+            p {
+              display: none;
+            }
+            span.caret {
+              left: 53px;
+            }
+          }
+        }
+        li.owner a {
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
 }
 
 nav {
@@ -96,8 +146,11 @@ nav {
   padding-left: 72px;
   padding-right: 72px;
   background-color: $color-blue;
-  div {
+  clear: both;
+
+  .name-nav {
     float: left;
+
     p {
       text-transform: uppercase;
       font-family: $font-family-basic;
@@ -106,32 +159,34 @@ nav {
       line-height: 62px;
     }
   }
-}
-.participants {
-  float: right;
 
-  li {
-    float: left;
-    list-style: none;
-    height: 100%;
-    a {
-      text-transform: capitalize;
-      text-decoration: none;
-      color: $color-dark-blue;
-      font-family: $font-family-basic;
-      font-size: $font-size+2.7px;
-      cursor: pointer;
-      padding: 10px 10px 5px 10px;
-      margin-left: 5px;
-      border-bottom: 2px solid $color-dark-blue;
+  .participants {
+    float: right;
+
+    li {
+      float: left;
+      list-style: none;
       height: 100%;
-      line-height: 64px;
-    }
-  }
 
-  a:hover, a.active-link {
-    color: $color-text;
-    border-bottom-color: $color-text;
+      a {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: $color-dark-blue;
+        font-family: $font-family-basic;
+        font-size: $font-size+2.7px;
+        cursor: pointer;
+        padding: 10px 10px 5px 10px;
+        margin-left: 5px;
+        border-bottom: 2px solid $color-dark-blue;
+        height: 100%;
+        line-height: 64px;
+      }
+    }
+
+    a:hover, a.active-link {
+      color: $color-text;
+      border-bottom-color: $color-text;
+    }
   }
 }
 
@@ -147,9 +202,11 @@ nav {
     color: #5d5d5d;
     outline: none;
   }
+
   div.small-buttons {
     display: block;
     float: right;
+
     button {
       display: block;
       float: left;
@@ -158,18 +215,23 @@ nav {
       height: 30px;
       margin-right: 10px;
     }
+
     button.btn-delete {
-      background: url("../images/delete-button.png") $color-rose center center no-repeat;
+      background: url($image-path + "/delete-button.png") $color-rose center center no-repeat;
       border: 1px solid $color-rose;
     }
+
     button.btn-block {
-      background: url("../images/LUC_users_light_5.png") $color-gray-blue center center no-repeat;
+      background: url($image-path + "/LUC_users_light_5.png") $color-gray-blue center center no-repeat;
       border: 1px solid $color-gray-blue;
     }
   }
+
   table {
     border: 1px solid $color-light-gray;
+
     tbody {
+
         tr {
           font-size: 14px;
           font-family: 'WeblySleek UI Semilight';
@@ -177,6 +239,7 @@ nav {
               text-align: left;
             }
         }
+
         th {
           background-color: $color-gray;
           text-align: center;
@@ -186,10 +249,12 @@ nav {
           height: 48px;
           vertical-align: middle;
         }
+
         tr.active-row {
           background-color: $color-light-blue;
           border: 2px solid $color-blue;
         }
+
         td:first-child {
           padding-top: 5px;
           padding-left: 7px;
@@ -202,12 +267,13 @@ nav {
         }
 
         td.add-btn-del {
-          background: url("../images/delete-button-black.png") no-repeat 113px 17px;
+          background: url($image-path + "/delete-button-black.png") no-repeat 113px 17px;
           padding-right: 80px;
           position: relative;
         }
+
         div.add-btn-edit {
-          background: url("../images/edit-button.png") no-repeat;
+          background: url($image-path + "/edit-button.png") no-repeat;
           z-index: 5;
           position: absolute;
           width: 16px;
@@ -219,10 +285,117 @@ nav {
     }
   }
 
-
-
 .container table tbody tr:hover {
     background-color: $color-light-blue;
     border: 2px solid $color-blue;
+}
 
+#myModal {
+  .modal-dialog {
+    margin: 130px auto;
+    width: 650px;
+    .modal-content {
+      .modal-header {
+        background-color: $color-light-black-for-modal-window;
+        height: 40px;
+        h4 {
+          color: $color-text;
+          font-size: $font-size+4;
+          line-height: 16px;
+          font-family: $font-family-basic;
+        }
+        button.close {
+          margin-top: 0;
+          opacity: 1;
+          font-size: 19px;
+          span {
+            color: white;
+            font-weight: 100;
+            text-shadow: none;
+          }
+        }
+      }
+      .modal-menu-items {
+        height: 64px;
+        width: 100%;
+        background-color: $color-light-gray-for-modal-window;
+        padding: 0;
+        ul.list-modal-links {
+          margin: 0;
+          li {
+            list-style: none;
+            display: block;
+            height: 100%;
+            float: left;
+            margin-left: 60px;
+            a {
+              color: $color-gray;
+              font-size: $font-size+4;
+              font-family: $font-family-basic;
+              padding: 15px 15px 7px 15px;
+              border-bottom: 2px solid $color-gray;
+              height: 100%;
+              line-height: 64px;
+            }
+            a:hover, a:link, a.active-modal-link {
+              text-decoration: none;
+              color: $color-black;
+              border-bottom-color: $color-black;
+            }
+          }
+
+          li:first-child {
+            margin-left: 30px;
+          }
+          li:last-child {
+            float: right;
+            margin-right: 50px;
+          }
+        }
+      }
+      .modal-body {
+        padding: 25px 50px 40px 30px;
+        form.form-horizontal {
+          .form-group {
+            margin-bottom: 10px;
+            label.control-label {
+              text-align: left;
+              color: $color-gray-for-modal-window;
+              font-family: $font-family-basic-light;
+              font-size: $font-size+4;
+            }
+            .outline:link {
+
+            }
+            input.form-control {
+              border-radius: 0;
+              border: 1px solid #979797;
+              outline: none;
+              -moz-box-shadow: none;
+              -webkit-box-shadow: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      .modal-footer {
+        height: 65px;
+        background-color: $color-gray-for-modal-window;
+        padding: 15px 10px 15px;
+        button {
+          padding: 10px 40px;
+          @include gradient(top, #3f3f3f, #141414);
+          color: $color-text;
+          outline: none;
+          border-radius: 4px;
+          border-color: #5d5d5d;
+          font-family: $font-family-basic;
+          font-size: $font-size+2.7;
+        }
+      }
+    }
+  }
+}
+.background-opacity {
+  opacity: 0.5;
 }
