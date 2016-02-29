@@ -39,7 +39,6 @@ header {
     color: $color-text;
     margin: 0;
   }
-
   .menu-items {
     display: block;
     float: right;
@@ -147,10 +146,8 @@ nav {
   padding-right: 72px;
   background-color: $color-blue;
   clear: both;
-
   .name-nav {
     float: left;
-
     p {
       text-transform: uppercase;
       font-family: $font-family-basic;
@@ -159,15 +156,12 @@ nav {
       line-height: 62px;
     }
   }
-
   .participants {
     float: right;
-
     li {
       float: left;
       list-style: none;
       height: 100%;
-
       a {
         text-transform: capitalize;
         text-decoration: none;
@@ -182,7 +176,6 @@ nav {
         line-height: 64px;
       }
     }
-
     a:hover, a.active-link {
       color: $color-text;
       border-bottom-color: $color-text;
@@ -192,7 +185,6 @@ nav {
 
 .container {
   margin: 25px 80px 0 72px;
-
   button.invite-users {
     display: block;
     float: left;
@@ -202,11 +194,9 @@ nav {
     color: #5d5d5d;
     outline: none;
   }
-
   div.small-buttons {
     display: block;
     float: right;
-
     button {
       display: block;
       float: left;
@@ -215,12 +205,10 @@ nav {
       height: 30px;
       margin-right: 10px;
     }
-
     button.btn-delete {
       background: url($image-path + "/delete-button.png") $color-rose center center no-repeat;
       border: 1px solid $color-rose;
     }
-
     button.btn-block {
       background: url($image-path + "/LUC_users_light_5.png") $color-gray-blue center center no-repeat;
       border: 1px solid $color-gray-blue;
@@ -343,7 +331,6 @@ nav {
               border-bottom-color: $color-black;
             }
           }
-
           li:first-child {
             margin-left: 30px;
           }
@@ -365,7 +352,6 @@ nav {
               font-size: $font-size+4;
             }
             .outline:link {
-
             }
             input.form-control {
               border-radius: 0;
